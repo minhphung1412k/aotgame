@@ -2,10 +2,8 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AOT: THE FINAL STAND - REVOLUTION</title>
+    <title>AOT: THE FINAL STAND - CINEMATIC</title>
     <link rel="stylesheet" href="style.css">
-    
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
       {
@@ -21,30 +19,27 @@
         <div class="menu-background"></div>
         <div class="menu-content">
             <h1 class="game-title">ATTACK ON TITAN</h1>
-            <h2 class="menu-subtitle">CHỌN CHIẾN BINH CỦA BẠN</h2>
             <div class="character-container">
                 <div class="char-card" id="char-eren" onclick="selectCharacter('Eren Jaeger')">
-                    <img src="eren.png" alt="Eren" class="char-img">
-                    <div class="char-info"><h3>EREN JAEGER</h3><p>Titan Tiến Công</p></div>
+                    <img src="eren.png" class="char-img">
+                    <div class="char-info"><h3>EREN JAEGER</h3></div>
                 </div>
                 <div class="char-card" id="char-levi" onclick="selectCharacter('Levi Ackerman')">
-                    <img src="levi.png" alt="Levi" class="char-img">
-                    <div class="char-info"><h3>LEVI ACKERMAN</h3><p>Mạnh Nhất Nhân Loại</p></div>
+                    <img src="levi.png" class="char-img">
+                    <div class="char-info"><h3>LEVI ACKERMAN</h3></div>
                 </div>
             </div>
-            <button id="start-game-btn" class="disabled" onclick="startGame()" disabled>BẮT ĐẦU CHUYẾN TRINH SÁT</button>
+            <button id="start-game-btn" class="disabled" onclick="startGame()" disabled>VÀO THẾ GIỚI MỞ</button>
         </div>
     </div>
 
     <div id="game-hud" class="hidden">
         <div id="status-bar">
-            <span>NHÂN VẬT: <b id="current-char-display"></b></span>
-            <span>DI CHUYỂN: <b>W,A,S,D + CHUỘT</b></span>
-            <span>CHIẾN ĐẤU: <b>CLICK CHUỘT</b></span>
+            <span>CHIẾN BINH: <b id="current-char-display"></b></span>
+            <span>DI CHUYỂN: <b>W,A,S,D</b> | CHIẾN ĐẤU: <b>CLICK CHUỘT</b></span>
         </div>
         <div id="npc-subtitle"></div>
     </div>
-
     <canvas id="game-canvas"></canvas>
     <script type="module" src="script.js"></script>
 </body>
