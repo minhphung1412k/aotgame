@@ -2,30 +2,48 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>ATTACK ON TITAN: SHIGANSHINA REBORN</title>
+    <title>ATTACK ON TITAN: THE FINAL STAND - ULTIMATE VERSION</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="ui">
-        <div id="stats">
-            <div class="label">GAS TANK:</div>
-            <div id="gas-bar"><div id="gas-fill"></div></div>
-            <div id="blade-status">BLADES: READY</div>
+    <div id="vignette"></div>
+    <div id="grain"></div>
+
+    <div id="ui-container">
+        <div class="status-box">
+            <div class="label">TÌNH TRẠNG CHIẾN BINH: <span id="rank">BINH NHÌ</span></div>
+            <div class="gauge-container">
+                <div class="gauge-label">GAS (BỘ CƠ ĐỘNG):</div>
+                <div class="gauge-bar"><div id="gas-fill"></div></div>
+            </div>
+            <div class="gauge-container">
+                <div class="gauge-label">ĐỘ BỀN LƯỠI KIẾM:</div>
+                <div class="gauge-bar"><div id="blade-fill"></div></div>
+            </div>
         </div>
+        <div id="alert-msg">CẢNH BÁO: TITAN ĐANG TIẾP CẬN!</div>
     </div>
 
-    <div id="crosshair"></div>
-
-    <div id="tutorial">
-        <h1>TRINH SÁT ĐOÀN - HUẤN LUYỆN TÂN BINH</h1>
-        <p><b>[Chuột Trái]</b>: Bắn móc dây vào tường/nhà/Titan</p>
-        <p><b>[Giữ Chuột]</b>: Thu dây để kéo cơ thể bay đi</p>
-        <p><b>[W,A,S,D]</b>: Điều hướng khi đang bay</p>
-        <button id="start-btn">CHIẾN ĐẤU!</button>
+    <div id="crosshair">
+        <div class="top"></div><div class="bottom"></div>
+        <div class="left"></div><div class="right"></div>
+        <div class="dot"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/controls/PointerLockControls.js"></script>
+    <div id="mission-start">
+        <h1 class="glow-text">DỰ ÁN SHIGANSHINA</h1>
+        <div class="manual">
+            <p>⚔️ <b>CHUỘT TRÁI</b>: BẮN MÓC DÂY (GRAFFITI HOOK)</p>
+            <p>🚀 <b>GIỮ CHUỘT TRÁI</b>: KÍCH HOẠT PHẢN LỰC GAS (BOOST)</p>
+            <p>🏃 <b>W/A/S/D</b>: DI CHUYỂN & ĐIỀU HƯỚNG KHÔNG TRUNG</p>
+            <p>🖱️ <b>DI CHUỘT</b>: QUAY GÓC NHÌN (CAMERA 360°)</p>
+            <p>🔴 <b>LƯU Ý</b>: HÃY NHẮM VÀO GÁY TITAN ĐỂ KẾT LIỄU!</p>
+        </div>
+        <button id="btn-deploy">XUẤT QUÂN NGAY!</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
