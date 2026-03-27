@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTACK ON TITAN: THE FINAL FRONTIER</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+    <div id="lens-flare"></div>
+
+    <div id="ui-layer">
+        <div id="status">NHIỆM VỤ: KHÁM PHÁ QUẬN SHIGANSHINA</div>
+        
+        <div id="story-box">
+            Mặt trời đang lên phía sau bức tường thành Maria. Bạn là một thực tập sinh mới của Quân đoàn Trinh sát. <br><br>
+            <b>Hệ thống cốt truyện mở:</b> Hành động của bạn lúc này sẽ thay đổi hoàn toàn cục diện cuộc chiến Titan. Hãy cẩn trọng.
+        </div>
+        
+        <div id="controls">
+            <button onclick="choosePath('training')">LUYỆN TẬP KHỔ CỰC</button>
+            <button onclick="choosePath('dark')">KẾ HOẠCH BÍ MẬT</button>
+        </div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
