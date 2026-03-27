@@ -1,28 +1,23 @@
-/* Giữ nguyên các phần cũ, thêm đoạn này vào cuối */
-.screen-shake {
-    animation: shake 0.2s;
-    animation-iteration-count: infinite;
-}
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; color: #fff; font-family: 'serif'; }
+.hidden { display: none !important; }
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    50% { transform: translate(-1px, 2px) rotate(1deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
+/* MENU CHỌN NHÂN VẬT */
+#character-selection-screen { position: fixed; width: 100%; height: 100%; z-index: 100; display: flex; justify-content: center; align-items: center; }
+.menu-background { position: absolute; width: 100%; height: 100%; background: #111; filter: brightness(0.3); z-index: -1; }
+.game-title { font-size: 60px; letter-spacing: 10px; text-shadow: 0 0 20px red; margin: 0; }
+.character-container { display: flex; gap: 30px; margin: 40px 0; }
+.char-card { width: 250px; height: 380px; border: 2px solid #444; overflow: hidden; cursor: pointer; transition: 0.3s; position: relative; }
+.char-card:hover, .char-card.selected { border-color: red; transform: scale(1.05); box-shadow: 0 0 20px red; }
+.char-img { width: 100%; height: 100%; object-fit: cover; }
+.char-info { position: absolute; bottom: 0; background: linear-gradient(transparent, black); width: 100%; padding: 10px; }
 
-#npc-subtitle {
-    position: fixed;
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.8);
-    color: #ff0000;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    display: none; /* Chỉ hiện khi NPC nói */
-    z-index: 60;
-}
+#start-game-btn { padding: 15px 40px; background: none; border: 2px solid white; color: white; cursor: pointer; font-weight: bold; }
+#start-game-btn:hover:not(.disabled) { background: white; color: black; }
+#start-game-btn.disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* TRONG GAME HUD */
+#game-hud { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: 50; }
+#status-bar { padding: 20px; background: rgba(0,0,0,0.7); display: flex; justify-content: space-between; border-bottom: 2px solid red; }
+#npc-subtitle { position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); padding: 10px 30px; border-radius: 10px; color: yellow; display: none; }
+
+#game-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
